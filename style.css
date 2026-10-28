@@ -1,0 +1,120 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 640px;
+  height: 400px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* Left: form */
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.sign-in h1 { margin: 0 0 18px; font-size: 26px; font-weight: 700; }
+
+.socials { display: flex; gap: 9px; margin-bottom: 18px; }
+
+.socials a {
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.socials a:hover { background: #f3f3f3; }
+
+.hint { margin: 0 0 12px; font-size: 11px; color: #333; }
+
+.sign-in input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 9px 14px;
+  font: 400 13px "Montserrat", sans-serif;
+  background: #eee;
+  border: 0;
+  border-radius: 8px;
+  outline: 0;
+}
+
+.forgot {
+  margin: 4px 0 18px;
+  font-size: 12px;
+  color: #555;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 9px 45px;
+  font: 600 12px "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #512da8;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover { background: #432391; }
+
+/* Right: purple panel */
+.welcome {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, #5c6bc0, #512da8);
+  border-radius: 150px 0 0 100px;
+}
+
+.welcome h1 { margin: 0 0 14px; font-size: 26px; font-weight: 700; }
+.welcome p { margin: 0 0 24px; font-size: 13px; line-height: 1.5; }
+
+.btn--ghost {
+  background: transparent;
+  border-color: #fff;
+}
+
+.btn--ghost:hover { background: rgba(255, 255, 255, 0.15); }
+
+@media (max-width: 600px) {
+  .container { height: auto; flex-direction: column; }
+  .sign-in { width: 100%; padding: 30px; }
+  .welcome { position: static; width: 100%; padding: 30px; border-radius: 80px 0 0 0; }
+}
